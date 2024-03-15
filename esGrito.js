@@ -8,10 +8,13 @@ function esGrito(palabra) {
         if(palabra[i] == '!') signos++;
         else letras++;
     }
-
-    document.write("Sentencia: " + palabra + "<br>");
-    if(signos > letras) document.write("ESGRITO");
-    else document.write("escrito");
+    
+    if(signos > letras) return true;
 }
 
-esGrito(palabra);
+document.write("Sentencia: " + palabra + "<br>");
+if(esGrito(palabra)) {
+    document.write("ESGRITO");
+} else {
+    document.write("Escrito");
+}
